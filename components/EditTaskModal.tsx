@@ -28,8 +28,8 @@ export default function EditTaskModal({ task, onClose, onSave }: EditTaskModalPr
     try {
       await onSave({
         ...formData,
-        due_date: formData.due_date || null,
-        category: formData.category || null
+        due_date: formData.due_date || undefined,
+        category: formData.category || undefined
       })
       onClose()
     } catch (error) {
